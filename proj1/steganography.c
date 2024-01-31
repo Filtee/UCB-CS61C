@@ -60,6 +60,8 @@ Image *steganography(Image *image) {
       pixel->R = pixel_converted->R;
       pixel->G = pixel_converted->G;
       pixel->B = pixel_converted->B;
+
+      free(pixel_converted);
     }
   }
 

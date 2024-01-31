@@ -26,6 +26,9 @@
 // Make sure that you close the file with fclose before returning.
 Image *readData(char *filename) {
   FILE *fp = fopen(filename, "r");
+  if (fp == NULL) {
+    exit(-1);
+  }
 
   // Initialize the image.
   char format[5];
