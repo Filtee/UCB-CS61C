@@ -76,8 +76,10 @@ main:
 # a1 is the address of the "output" array (defined above).
 # Think: why might having a1 be useful?
 f:
-    # YOUR CODE GOES HERE!
-
+    addi t0, a0, 3      # Get the index of output.
+    slli t0, t0, 2      # Count the offset bytes.
+    add  t1, a1, t0
+    lw   a0, 0(t1)
     jr ra               # Always remember to jr ra after your function!
 
 print_int:
