@@ -39,22 +39,23 @@ matmul:
 
     # Prologue
     addi sp, sp, -32
-    sw ra, 0(sp)
-    sw s0, 4(sp)
-    sw s1, 8(sp)
-    sw s2, 12(sp)
-    sw s3, 16(sp)
-    sw s4, 20(sp)
-    sw s5, 24(sp)
-    sw s6, 28(sp)
+    sw ra, 0(sp)                
+    sw s0, 4(sp)                # s0: pointer to the start of m0
+    sw s1, 8(sp)                # s1: number of rows of m0
+    sw s2, 12(sp)               # s2: number of columns of m0
+    sw s3, 16(sp)               # s3: pointer to the start of m1
+    sw s4, 20(sp)               # s4: number of rows of m1
+    sw s5, 24(sp)               # s5: number of columns of m1
+    sw s6, 28(sp)               # s6: pointer to the start of d
 
-    mv s0, a0                   # s0: pointer to the start of m0
-    mv s1, a1                   # s1: number of rows of m0
-    mv s2, a2                   # s2: number of columns of m0
-    mv s3, a3                   # s3: pointer to the start of m1
-    mv s4, a4                   # s4: number of rows of m1
-    mv s5, a5                   # s5: number of columns of m1
-    mv s6, a6                   # s6: pointer to the start of d
+    mv s0, a0                   
+    mv s1, a1                   
+    mv s2, a2                   
+    mv s3, a3                   
+    mv s4, a4                   
+    mv s5, a5                   
+    mv s6, a6              
+
     mv t0, zero                 # t0: row counter
     mv t1, zero                 # t1: column counter
 

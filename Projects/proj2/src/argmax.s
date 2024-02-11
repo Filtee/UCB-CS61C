@@ -21,13 +21,13 @@ argmax:
 
     # Prologue
     addi sp, sp, -8
-    sw s0, 0(sp)
-    sw s1, 4(sp)
+    sw s0, 0(sp)                # s0: pointer to the start of vector
+    sw s1, 4(sp)                # s1: number of elements
+
+    mv s0, a0
+    mv s1, a1
 
 loop_start:
-    mv s0, a0                   # s0: pointer to the start of vector
-    mv s1, a1                   # s1: number of elements
-
     # Set the first item as default.
     addi t0, zero, 1            # t0: counter
     mv t1, zero                 # t1: index of the largest

@@ -20,12 +20,13 @@ relu:
     # Prologue
     addi sp, sp, -12
     sw ra, 0(sp)
-    sw s0, 4(sp)
-    sw s1, 8(sp)
+    sw s0, 4(sp)                # s0: pointer to the array
+    sw s1, 8(sp)                # s1: number of elements
+
+    mv s0, a0
+    mv s1, a1
 
 loop_start:
-    mv s0, a0                   # s0: pointer to the array
-    mv s1, a1                   # s1: number of elements
     mv t0, zero                 # t0: counter
 
 loop_continue:
@@ -39,6 +40,7 @@ loop_continue:
     bge t2, zero, loop_back     # if t2 >= 0 then loop_back
     mv t2, zero                 # t2 = 0
     sw t2, 0(t1)                # Set the item value to 0.
+
 loop_back:
     addi t0, t0, 1              # cnt++
     j loop_continue             # jump to loop_continue
@@ -53,6 +55,6 @@ loop_end:
 	ret
 
 error:
-    li a1, 78           # Set error code 78.
-    jal exit2           # Terminate the program.
+    li a1, 78                   # Set error code 78.
+    jal exit2                   # Terminate the program.
     
