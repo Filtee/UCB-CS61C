@@ -34,6 +34,6 @@ All the tests passed, except for this…
 
 ![issue](./tools/issue.png)
 
-The result show that it works fine, I don’t know why this would happen…
+The result shows that it works fine, I don’t know why this would happen…
 
 Anyways, I’ve done it! 😋
