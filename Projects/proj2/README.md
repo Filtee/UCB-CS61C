@@ -1,4 +1,4 @@
-# fa20-proj2-starter
+# Proj2
 
 ```
 .
@@ -24,5 +24,16 @@
     └── unittests.py (partA + partB)
 ```
 
-
 ## Here's what I did in project 2:
+
+Mine works, hope you could get some help here. 🕺
+
+![final](./tools/final.png)
+
+All the tests passed, except for this…
+
+![issue](./tools/issue.png)
+
+The result show that it works fine, I don’t know why this would happen…
+
+Anyways, I’ve done it! 😋
