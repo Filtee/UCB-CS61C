@@ -25,7 +25,7 @@
 write_matrix:
 
     # Prologue
-	addi sp, sp, -32
+    addi sp, sp, -32
     sw ra, 0(sp)
     sw s0, 4(sp)                # s0: ptr to string representing filename
     sw s1, 8(sp)                # s1: ptr to the start of the matrix in memory
@@ -77,7 +77,7 @@ write_matrix:
     lw s4, 20(sp)
     lw s5, 24(sp)
     lw s6, 28(sp)
-	addi sp, sp, 32
+    addi sp, sp, 32
 
     ret
 

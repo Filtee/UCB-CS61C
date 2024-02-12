@@ -26,7 +26,7 @@ classify:
     bne a0, t0, error_89
 
     # Prologue
-	addi sp, sp, -32
+    addi sp, sp, -32
     sw ra, 0(sp)
     sw s0, 4(sp)            # s0: argv
     sw s1, 8(sp)            # s1: print_classification
@@ -180,7 +180,7 @@ skip_print:
     lw s4, 20(sp)
     lw s5, 24(sp)
     lw s6, 28(sp)
-	addi sp, sp, 32
+    addi sp, sp, 32
 
     ret
 

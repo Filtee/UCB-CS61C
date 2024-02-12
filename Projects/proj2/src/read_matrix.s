@@ -27,7 +27,7 @@
 read_matrix:
 
     # Prologue
-	addi sp, sp, -28
+    addi sp, sp, -28
     sw ra, 0(sp)
     sw s0, 4(sp)            # s0: pointer to filename string
     sw s1, 8(sp)            # s1: pointer to number of rows
@@ -85,7 +85,7 @@ read_matrix:
     lw s3, 16(sp)
     lw s4, 20(sp)
     lw s5, 24(sp)
-	addi sp, sp, 28
+    addi sp, sp, 28
 
     ret
 
