@@ -56,7 +56,7 @@ classify:
     jal call_malloc         # Call function "call_malloc"
     mv s6, a0               # Save the ptr at s6.
 
-	# =====================================
+    # =====================================
     # LOAD MATRICES
     # =====================================
 
