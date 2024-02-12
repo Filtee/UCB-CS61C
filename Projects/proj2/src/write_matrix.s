@@ -54,7 +54,7 @@ write_matrix:
     addi s5, s5, 2              # Add two int: (row, col).
     jal call_malloc             # Call function "call_malloc".
     sw s2, 0(s6)                # Save int "rows".
-    sw s2, 4(s6)                # Save int "cols".
+    sw s3, 4(s6)                # Save int "cols".
     addi a0, s6, 8              # Count start address of matrix in buffer.
     jal save_matrix             # Save all the items of matrix.
     jal call_fwrite             # Call function "call_fwrite".
